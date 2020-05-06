@@ -12,11 +12,19 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import HelloWorld from "./components/HelloWorld.vue";
+import axios from "axios";
 
 @Component({
   components: {}
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  mounted() {
+    axios({
+      method: "get",
+      url: "http://34.84.145.207:8000/index/string"
+    });
+  }
+}
 </script>
 
 <style>
