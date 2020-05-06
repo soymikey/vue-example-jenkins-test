@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  nodejs:
+    build:                          # 这里指的是我们刚刚撸的 Dockerfile 文件
+      context: .                    
+      dockerfile: Dockerfile
+    image: nodejs                   # 镜像名称
+    container_name: vue-example          # 容器名称
+    restart: always                 # 重启方式
+    ports:                          # 映射端口
+      - "8081:8081"
