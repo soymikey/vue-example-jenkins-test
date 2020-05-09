@@ -28,7 +28,7 @@ RUN npm i
 COPY . /usr/src/node-app/vue-sample
 
 # 暴露容器端口
-EXPOSE 8081
+EXPOSE 8080
 
 # 启动node应用
 CMD npm run serve
